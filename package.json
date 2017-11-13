@@ -1,14 +1,18 @@
 {
   "name": "lazyexpress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An unopinionated Express boilerplate builder.",
-  "main": "index.js",
+  "main": "api.js",
+  "bin": {
+    "lazyExpress": "./index.js"
+  },
   "repository": "git@github.com:brick-layers/lazyExpress.git",
   "author": "brick-layers",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "yarn run clear && node index.js lay tests/testInput.json tests/output",
+    "start":
+      "yarn run clear && node index.js lay tests/testInput.json tests/output",
     "clear": "rm -rf tests/output"
   },
   "devDependencies": {
