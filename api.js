@@ -8,4 +8,4 @@ const api = (inputFile, outputPath) => {
   })
 }
 
-module.exports = api
+module.exports = { api }
