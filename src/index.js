@@ -3,7 +3,7 @@ const prettier = require('prettier')
 
 const Index = require('./_index')
 const Path = require('./_path')
-const ApiIndex = require('./_paths-index)
+const ApiIndex = require('./_api-index')
 
 const operator = (buildPath, data) => {
   // Create /destination directory
@@ -16,8 +16,8 @@ const operator = (buildPath, data) => {
   writeFile(buildPath, 'index.js', index.output)
 
   // Create array of Paths
-  const paths = Object.keys(data.paths).map(
-    key => new Path(key, data.paths[key])
+  const paths = Object.keys(data.models).map(
+    key => new Path(key, data.models[key])
   )
 
   // Write file for each Path in /api directory
